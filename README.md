@@ -5,4 +5,5 @@ This is a robot that can manage activities.
 
 **prefix: !**
 
-sync **slash**: No; **admin**: Yes;
+| **Command** | **Slash** | **Admin** |
+| sync | No | Yes |
