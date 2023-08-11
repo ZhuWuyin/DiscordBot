@@ -25,12 +25,12 @@ async def start_activity(ctx, id: str, description: str = ""):
     try :
         activity=activityDict[id]
         await ctx.send("这个ID的活动已经存在啦~\n\n")
-        await activityDict[id].activity_query(ctx)
+        await activity.activity_query(ctx)
     except KeyError:
         newActivity=Activity(id=id, status=True, description=description)
         activityDict[id]=newActivity
         await newActivity.activity_query(ctx)
-        update()
+        await update()
     
 @bot.hybrid_command()
 async def query_activity(ctx, id: str):
@@ -44,7 +44,7 @@ async def query_activity(ctx, id: str):
 async def end_activity(ctx, id: str):
     try :
         await activityDict[id].activity_end(ctx)
-        update()
+        await update()
     except KeyError:
         await ctx.send("这个活动不存在哦~")
 
