@@ -55,10 +55,10 @@ def update():
         keys=activityDict.keys()
         for k in keys:
             serialize[k]=activityDict[k].serialization()
-        sync.write(str(serialize))
+        sync.write(str(serialize, encoding="utf-8"))
 
 async def loadActivities():
-    with open("activities", "r") as load:
+    with open("activities", "r", encoding="utf-8") as load:
         tempDict: dict = eval(load.readline())
         keys=tempDict.keys()
         for k in keys:
@@ -70,7 +70,7 @@ async def loadActivities():
             activityDict[k]=Activity(id=id, status=status, description=description, nameList=nameList)
 
 try :
-    with open("activities", "r") as load:
+    with open("activities", "r", encoding="utf-8") as load:
         pass
 except FileNotFoundError:
     update()
