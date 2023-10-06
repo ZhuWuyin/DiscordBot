@@ -3,9 +3,10 @@ This is a robot that can manage activities.
 
 ### Commands
 
-**prefix: !**<br>
-**e.g.** `You: !ping` `Bot: Hi`
-<br>
+**prefix: !**<br><br>
+**e.g.**<br>
+`You: !ping`<br>
+`Bot: Hi`<br>
 <br>
 | **Command** | **Slash** | **Admin** | **Parameters** |
 | - | - | - | - |
