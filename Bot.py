@@ -70,18 +70,7 @@ async def list_all_activities(ctx):
 
 @bot.hybrid_command()
 async def forward(ctx, content: str):
-    # if ctx.author.name != "zhuwuyin":
-    #     await ctx.send("我是丁真")
-    # else:
-    #     await ctx.send(content)
     await ctx.send(content)
-
-@bot.hybrid_command()
-async def query(ctx, user: str, item: str):
-    if "yuhan" in user.lower():
-        await ctx.send(f"{user} 的 {item}: 0%")
-    else :
-        await ctx.send("{0} 的 {1}: {2}%".format(user, item, random.randint(60, 110)))
 
 @bot.hybrid_command()
 async def dice(ctx, num_of_dice: int, low: int, high: int):
@@ -109,7 +98,6 @@ async def playNext(ctx, voice_channel: discord.VoiceClient, serverBot: Server):
 
 
 server: dict[discord.Guild, Server] = {}
-
 
 @bot.hybrid_command(help="play_mode: 随机播放 --> random；循环播放 --> loop；单曲循环 --> single")
 async def play(ctx, folder: str, index: int, play_mode: str, volume: float):
