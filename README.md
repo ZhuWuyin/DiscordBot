@@ -28,6 +28,7 @@ This is a robot that can manage activities.
 | skip | No | **No parameter** |
 | list_all_songs | No | **folder**: The folder you want to check 
 
+### <br>
 ### How to use<br>
 **1.** Download the **exeFile** folder<br>
 **2.** Get a robot on **https://discord.com/developers/applications**<br>
