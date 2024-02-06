@@ -25,7 +25,8 @@ This is a robot that can manage activities.
 | dice | No | **num_of_dice**： The number of dice you want to roll;<br>**low**: The lowest value of the dice;<br>**high**: The maximum value of the dice|
 | play | No | **folder**: Folders with music you wish to play;<br>**index**: The index of the music you want to play(0 is the first music);<br>**play_mode**: The play mode you want;<br>**volume**: The Volume of your bot in the voice channel|
 | leave | No | **No parameter** |
-
+| skip | No | **No parameter** |
+| list_all_songs | No | **folder**: The folder you want to check |
 
 ### How to use<br>
 **1.** Download the **exeFile** folder<br>
