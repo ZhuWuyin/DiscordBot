@@ -3,19 +3,29 @@ This is a robot that can manage activities.
 
 ### Commands
 
-**prefix: !**<br><br>
-**e.g.**<br>
-`You: !ping`<br>
-`Bot: Hi`<br>
-<br>
+**prefix commands (prefix: !):**<br>
 | **Command** | **Slash** | **Admin** | **Parameters** |
 | - | - | - | - |
 | sync | No | Yes | **No parameter** |
 | ping | Yes | No | **No parameter** |
-| start_activity | Yes | Yes | **id**: Unique ID for an activity;<br>**description**: Details of the activity; |
-| end_activity | Yes | Yes | **id**: The unique ID for an activity you want to stop the registration process; |
-| query_activity | Yes | No | **id**: The unique ID for an activity you want to query; |
-| list_all_activities | Yes | No | **No parameter** |
+
+**e.g.**<br>
+`You: !ping`<br>
+`Bot: Hi`<br><br><br>
+
+**slash commands:**
+| **Command** | **Admin** | **Parameters** |
+| - | - | - |
+| ping | No | **No parameter** |
+| start_activity | Yes | **id**: Unique ID for an activity;<br>**description**: Details of the activity; |
+| end_activity | Yes | **id**: The unique ID for an activity you want to stop the registration process; |
+| query_activity | No | **id**: The unique ID for an activity you want to query; |
+| list_all_activities | No | **No parameter** |
+| forward | No | **content**: What you want the robot to relay for you |
+| dice | No | **num_of_dice**： The number of dice you want to roll;<br>**low**: The lowest value of the dice;<br>**high**: The maximum value of the dice|
+| play | No | **folder**: Folders with music you wish to play;<br>**index**: The index of the music you want to play(0 is the first music);<br>**play_mode**: The play mode you want;<br>**volume**: The Volume of your bot in the voice channel|
+| leave | No | **No parameter** |
+
 
 ### How to use<br>
 **1.** Download the **exeFile** folder<br>
