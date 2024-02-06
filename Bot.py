@@ -82,6 +82,9 @@ async def dice(ctx, num_of_dice: int, low: int, high: int):
         result.append("骰子 {0} 号：{1}".format(i+1, num))
     await ctx.send("\n".join(result) + "\n\n总和：{0}".format(total))
 
+
+server: dict[discord.Guild, Server] = {}
+
 async def playNext(ctx, voice_channel: discord.VoiceClient, serverBot: Server):
     filename = serverBot.getNext()
     path = serverBot.folder+"/"+filename
@@ -95,9 +98,6 @@ async def playNext(ctx, voice_channel: discord.VoiceClient, serverBot: Server):
         voice_channel.source, volume=serverBot.volume)
 
     await ctx.send("\n正在播放："+filename+"\n\n音量："+str(serverBot.volume*100)+"%")
-
-
-server: dict[discord.Guild, Server] = {}
 
 @bot.hybrid_command(help="play_mode: 随机播放 --> random；循环播放 --> loop；单曲循环 --> single")
 async def play(ctx, folder: str, index: int, play_mode: str, volume: float):
