@@ -1,5 +1,5 @@
 # Activities-Manager-Discord-Bot
-This is a robot that can manage activities.
+This is a robot that can manage activities, play music, and do other interesting things.
 
 ### Commands
 
